@@ -8,48 +8,31 @@ DATE: 05/01/20
 /*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)*/
 /*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page)*/
 
-@charset "utf-8";
+html{
+  background-color: #556B2F
+}
 
 text {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TOP NAVIGATION BAR */
-.topnav {
-  background-color: #8B0000;
+/* NAVIGATION STYLE */
+
+nav{
+  background-color:#B8860B;
 }
 
-/* TOP NAV BAR STYLE */
-/*M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page)*/
+/* SECTION STYLE */
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+h1{
+  color:#696969
 }
 
-/* HOVER LINK CHANGE */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* CONTENT STYLE */
-.content {
-  background-color: #556B2F;
-  }
-
-/* FOOTER STYLE */
-.footer {
+footer {
   background-color: #B8860B;
-  }
-
+}
 
