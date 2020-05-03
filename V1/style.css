@@ -10,8 +10,7 @@ DATE: 05/01/20
 
 @charset "utf-8";
 
-* {
-  box-sizing: border-box;
+text {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,7 +21,6 @@ body {
 
 /* TOP NAVIGATION BAR */
 .topnav {
-  overflow: hidden;
   background-color: #8B0000;
 }
 
@@ -47,14 +45,11 @@ body {
 /* CONTENT STYLE */
 .content {
   background-color: #556B2F;
-  padding: 10px;
-  height: 200px; 
-}
+  }
 
 /* FOOTER STYLE */
 .footer {
   background-color: #B8860B;
-  padding: 10px;
-}
+  }
 
 
