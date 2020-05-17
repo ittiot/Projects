@@ -1,0 +1,89 @@
+/* CIS 155 - PROJECT V1
+NAME: MARK ITTI
+DATE: 05/01/20
+*/
+
+/*STRUCTURAL STYLES*/
+
+/*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)*/
+/*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page)*/
+
+html{
+  background-color: #556B2F
+}
+
+text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/* NAVIGATION STYLE */
+
+nav {
+  background-color: #B8860B;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B8860B;
+}
+
+li {
+  float:left;
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color:#922B21;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* SECTION STYLE */
+
+h1{
+  color:#696969
+}
+
+h2{
+  color:#922B21;
+  text-align: center; 
+}
+
+h3{
+border-style: outset;
+border-color:#B8860B;
+text-align: center;
+color:darkslategray;
+}
+
+body{
+
+}
+
+/* FOOTER STYLE */
+
+footer {
+  background-color: #B8860B;
+  padding:0px;
+}
+
+/* M3LO2 Demonstrate floating elements */
+footer > img {
+  float: right;
+  -webkit-filter: opacity(0.8) 
+}
