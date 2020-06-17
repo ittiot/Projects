@@ -13,45 +13,77 @@ html{
 }
 
 text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* NAVIGATION STYLE */
 
 nav {
-  background-color: #B8860B;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  font-size: 16pt;
+
 }
 
-ul {
+nav ul {
+  background-color: #B8860B;
+  float: left;
   width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #B8860B;
-}
 
-li {
+  }
+
+nav ul li {
   float:left;
   text-align: center;
+  position: relative;
 }
 
-li a {
+nav ul li a {
   display: block;
   color:#922B21;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color:#B8860B;
+  width: 150px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 150px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: white;
+}
+
+/* M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves). 
+DROP DOWN NAV BAR OPTIONS, HIDDEN UNLESS HOVERED */
 
 /* SECTION/DIV STYLE */
 
@@ -65,6 +97,7 @@ h2{
   color:#922B21;
   text-align: left;
   text-shadow: 2px 2px #696969;
+  font-size: 36px;
 }
 
 h3{
@@ -73,8 +106,8 @@ text-align: left;
 color:#922B21;
 }
 
-* {
-  box-sizing: border-box;
+div.about{
+
 }
 
 /* M4LO4 Demonstrate the use of gradients (CSS) */
@@ -84,18 +117,28 @@ div.menu {
   background-image: linear-gradient(white, gray);
 }
 
-div.column  {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-  height: relative;
+/* M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
+M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
+M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them) 
+
+FLEX BOX PROPERTIES FOR PHOTOS PAGE. THE PHOTOS ARRANGE THEMSELVES IN ROWS/COLUMNS DUE TO FLEX PROPERTIES */
+
+div.photos ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
-/* M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is) clear both = no floating elements on either side */
-div.row::after {
-  content: "";
-  clear: both;
-  display: table;
+div.photos li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+div.photos img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: top;
 }
 
 /* M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML)  */
@@ -104,16 +147,15 @@ div.education {
   position: relative;
   background-color: white;
   border: 2px solid #556B2F;
-  height: 500px;
-}
+  height: 1000px;
+  padding-left: 20px;
+  }
 
 /* M3LO10 Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML) THIS MESSED IT UP KINDA. PROBABLY WILL TWEAK BUT JUST WANTED TO IMPLEMENT WITHIN CONTEXT OF MY PAGE */
 /* M4LO2 Demonstrate the use of background images (CSS) */
 
 div.recipes {
-  background-image: url("recipebackground.jpg");
   width: 50%;
-  overflow: scroll;
 }
 
 /* M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML) MAP INSIDE THE OVERALL BIG BOX */
@@ -125,13 +167,68 @@ right: 5px;
 border-radius: 4px;
 }
 
+/*Table Styles*/
+/* M6LO7 Demonstrate how to format a table with CSS */
+
+table {
+  background-color: #B8860B;
+  font-size: 16px;
+  width: 98%;
+  margin-bottom: 30px;
+}
+table, th, td, tr {
+  border: 2px solid black;
+}
+th {
+  vertical-align: top;
+}
+
+
+/*Form Styles*/
+/* M7LO11 Demonstrate how to format a form with CSS */
+
+form {
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 98.5%;
+}
+div.contactrow {
+  width: 98%;
+  text-indent: 2em;
+}
+textarea {
+  resize: none;
+  width: 75%;
+  height: 150px;
+  overflow: auto;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
 /* FOOTER STYLE */
 
 footer {
   background-color: #B8860B;
   padding:0px;
+  border: 2px solid black;
+  height: 100%;
 }
 
+div.footer {
+  float: left;
+  width: 75%;
+  padding: 5px;
+  height: relative;
+}
+
+div.creditcard{
+  content: "";
+  clear: both;
+  display: inline-block;
+  width:25%;
+  padding-right: 2px;
+}
 /* M3LO2 Demonstrate floating elements */
 /* M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML) TRYING TO GET THE CARD IMAGE PERFECTLY IN THE FOOTER BOX, MIGHT NOT USE THIS LATER */
 /* M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is) WEBKIT FILTER OPACITY */
@@ -141,9 +238,16 @@ footer {
 footer > img {
   float: right;
   -webkit-filter: opacity(0.8);
-  position: absolute;
-  top: 670px;
-  right: 0;
-  height:110px;
+  position: relative;
   border-radius: 8px;
 }
+
+/* M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site) 
+HIDE FOOTER FROM SMALLER SCREENS. LESS 'wide' stuff
+*/
+
+@media screen and (max-width: 600px) {
+  div.footer {
+    display: none;
+  }
+

@@ -17,19 +17,26 @@
 
     <body>
         <header>
-            <img src="banner.jpg" alt="Galare Thai - Kingston" style="width:100%;height:fit-content;opacity:0.5;"/>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="photos.html">Photos</a></li>
-            </ul>
-        </nav>
-        </header>
+            <img src="banner.jpg" alt="Galare Thai Kingston" style="width:100%;height:fit-content;opacity:0.5;"/>  
+            <nav>
+                <!--M1LO12 Create navigation using unordered lists (HTML)-->
+                <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link)-->    
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a>
+                        <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="https://www.facebook.com/galarethaikingston/">Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                </ul>
+            </nav>
+            </header>
 
-        <article>
+        <div class="about">
         <img src="family.jpg" alt="Mark, Tisha, Ethan, & Ava" style="float: right;width: 480px;padding: bottom 10px;" />
 
         <h2> About Us&colon; </h2> 
@@ -44,23 +51,111 @@
         
         <p>Originally, we set out to essentially duplicate our first restaurant here in Kingston. However as time has gone on we have begun to establish our own identity as a restaurant and family. Thankfully we have been able to perservere through any difficulties largely due to the support of our amazing customers!</p>
         
-        <h2> Changelog&colon;</h2>
+        </div>
 
-        <p>V1&colon; added index.html, about.html, style.css</p>
-        <p>V2&colon; added menu.html, added more to about.html, added more stylesheet rules, fixed top nav bar, a lot of format 'polishing'</p>
+        <section>
+            <div class="contactrow">
+              <p><strong>Comments or concerns please fill out the form:</strong></p>
+            </div>
+              <form action="mailto:ittiot@gmail.com" method="post" enctype="text/plain">
+                <div class="contactrow">
+                  <label for="firstnamebox">First Name*</label>
+                  <input name="firstname" id="firstnamebox" type="text" required />
+                </div>
+            
+                <div class="contactrow">
+                  <label for="lastnamebox">Last Name*</label>
+                  <input name="lastname" id="lastnamebox" type="text" required />
+                </div>
 
+                <div class="contactrow">
+                  <label for="email">Email*</label>
+                  <input name="email" id="email" type="text" required />
+                </div>
+
+                <div class="contactrow">
+                  <label for="number">Phone Number*</label>
+                  <input name="number" id="number" type="text" required />
+                </div>
+
+                <div class="contactrow">
+                    <label for="service">The reason for leaving comments:</label>
+                      <select name="comments" id="comments" required>
+                        <option value="first"> -- </option>
+                        <option value="compliment">Compliment</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="concern">Concern</option>
+                        <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                <!--M7LO8 Demonstrate the use of a selection list in a form -->
+
+                  <div class="contactrow">
+                    <label for="discovery">How did you find out about us?</label>
+                      <select name="discoverytype" id="discovery">
+                        <option value="first"> -- </option>
+                        <option value="google">Google Search</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="recommendation">Recommendation</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                      </select>
+                  </div>
+
+                  <div class="contactrow">
+                    <textarea placeholder="Please write your comment here" id="infoBox"></textarea>
+                    <!--M7LO5 Demonstrate the use of a text box in a form --> 
+                  </div>
+
+                  <div class="contactrow">
+                  <p><input type="submit" value="continue"/>
+                  <!--M7LO10 Demonstrate the use of a submit button in a form -->
+                  <input type="reset" value="reset" /></p>
+                  </div>
+              </form>
+        </section>
+
+        <div class = "changelog">
+        <!--M6LO3 Demonstrate how to create a table (HTML, explain table's purpose;
+            A table that displays the Version changelog.)        -->
+
+        <!--M6LO4 Demonstrate how to span multiple rows or multiple columns in a table (HTML, document where 
+            you write HTML that causes a multi-row or multi-column span; say which one it is as well: row or column, 
+            or both) multi-column span, two columns -->
+
+        <article>
+        <table>
+        <thead><tr>
+        <th colspan="2"><h2> Changelog&colon;</h2></th>
+        </tr></thead>
+
+        <tr><th scope ="row">V1&colon;</th> <td>added index.html, about.html, style.css</td></tr>
+        <tr><th scope = "row">V2&colon;</th> <td>added menu.html, added more to about.html, added more stylesheet rules, fixed top nav bar, a lot of format 'polishing'</td></tr>
+        <tr><th scope = "row">V3&colon;</th> <td>added table, drop down selector list, added flexbox to photos page, various css updating, fixed education page and removed some M03 objectives</td></tr>
+
+        </table>
         </article>
+        </div>
+
+
 
         <footer>
             <!--M1LO7 Demonstrate the use of ordered lists (HTML)-->
-            <strong> Contact Information:</strong>
-            <ul>Address: 26050 Central Ave NE
+            <!--M1LO10 Demonstrate the use of special characters from extended character sets (HTML, use entities, not cut-and-pasted unicode characters)-->
+            <div class = "footer">
+            <strong> Contact Information:</strong> 
+            <ul>Address&colon; 26050 Central Ave NE
             <br>Kingston, WA 98346
             <br>Phone Number: 360.297.4022
+            <br>Hours: Mon-Sat 4PM-8PM
             </ul>
-            <img src="creditcard.jpg" alt="VISA MASTERCARD AMERICAN EXPRESS DISCOVER" />
             <p>We accept all major credit card providers.</p>
-            
+            </div>
+            <div class="creditcard">
+            <img src="creditcard.jpg" alt="VISA MASTERCARD AMERICAN EXPRESS DISCOVER" style ="width:100%"/>
+            </div>
+
         </footer>
 
     </body>

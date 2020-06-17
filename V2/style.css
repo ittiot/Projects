@@ -77,6 +77,10 @@ color:#922B21;
   box-sizing: border-box;
 }
 
+table, th, td {
+border: 1px solid black;
+}
+
 /* M4LO4 Demonstrate the use of gradients (CSS) */
 
 div.menu {
@@ -92,6 +96,7 @@ div.column  {
 }
 
 /* M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is) clear both = no floating elements on either side */
+
 div.row::after {
   content: "";
   clear: both;
