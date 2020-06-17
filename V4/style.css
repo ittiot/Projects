@@ -1,0 +1,315 @@
+/* CIS 155 - PROJECT V1
+NAME: MARK ITTI
+DATE: 05/01/20
+*/
+
+/*STRUCTURAL STYLES*/
+
+/*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)*/
+/*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page)*/
+
+html{
+  background-color: #556B2F
+}
+
+text {
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  color:#696969
+}
+
+/* M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML) */
+
+h2{
+  color:#922B21;
+  text-align: center;
+  text-shadow: 2px 2px #696969;
+  font-size: 36px;  
+}
+
+h3{
+border-bottom: 4px double #556B2F;
+text-align: left;
+color:#922B21;
+}
+
+/* NAVIGATION STYLE */
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16pt;
+
+}
+
+nav ul {
+  background-color: #B8860B;
+  float: left;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  }
+
+nav ul li {
+  float:left;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color:#922B21;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color:#B8860B;
+  width: 150px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 150px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: white;
+}
+
+/* M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves). 
+DROP DOWN NAV BAR OPTIONS, HIDDEN UNLESS HOVERED */
+
+/* SECTION/DIV STYLE */
+
+div.index{
+  background-color: white;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+
+div.welcome{
+  margin-top: 60px;
+  animation: text 3s 1;
+}
+
+/* M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML; note it has to include a time aspect, not be immediate) 
+    WELCOME TEXT HAS A LITTLE FUN ANIMATION, EYE-CATCHING HOPEFULLY */
+
+@keyframes text {
+  0%{
+    color: #556B2F;
+  }
+  30%{
+    letter-spacing: 15px;
+  }
+  85%{
+    letter-spacing: 10px;
+  }
+}
+
+div.about{
+  background-color: white;
+  padding: 15px;
+
+}
+
+section {
+  background-color: #B8860B;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* M4LO4 Demonstrate the use of gradients (CSS) */
+
+div.menu {
+  background-color: white;
+  background-image: linear-gradient(white, gray);
+  margin-top: 60px;
+  padding: 20px;
+}
+
+/* M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
+M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
+M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them) 
+
+FLEX BOX PROPERTIES FOR PHOTOS PAGE. THE PHOTOS ARRANGE THEMSELVES IN ROWS/COLUMNS DUE TO FLEX PROPERTIES */
+
+div.photos ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+div.photos li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+div.photos img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+/* M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML)  */
+
+div.education {
+  position: relative;
+  background-color: white;
+  border: 2px solid #556B2F;
+  height: 100%;
+  padding-left: 20px;
+  margin-top: 60px;
+  }
+
+  figure {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 480px;
+    border: 1px #cccccc solid;
+    padding: 2px;
+    margin: auto;
+  }
+
+  figcaption {
+    background-color:black;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
+
+/* M3LO10 Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML) THIS MESSED IT UP KINDA. PROBABLY WILL TWEAK BUT JUST WANTED TO IMPLEMENT WITHIN CONTEXT OF MY PAGE */
+/* M4LO2 Demonstrate the use of background images (CSS) */
+
+div.recipes {
+  width: 50%;
+}
+
+/* M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML) MAP INSIDE THE OVERALL BIG BOX */
+
+div.map {
+height: 720px;
+}
+
+/*Table Styles*/
+/* M6LO7 Demonstrate how to format a table with CSS */
+
+table {
+  background-color: #B8860B;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+table, th, td, tr {
+  border: 2px solid black;
+}
+th {
+  vertical-align: top;
+}
+
+
+/*Form Styles*/
+/* M7LO11 Demonstrate how to format a form with CSS */
+
+form {
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 98.5%;
+}
+div.contactrow {
+  width: 98%;
+  text-indent: 2em;
+}
+textarea {
+  resize: none;
+  width: 75%;
+  height: 150px;
+  overflow: auto;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+div.video {
+position: absolute;
+right: 5px;
+width: 50%;
+}
+
+/* FOOTER STYLE */
+
+footer {
+  background-color: #B8860B;
+  padding:0px;
+  border: 2px solid black;
+  height: 100%;
+}
+
+div.footer {
+  float: left;
+  width: 75%;
+  padding: 5px;
+  height: 100%;
+}
+
+div.creditcard{
+  content: "";
+  clear: both;
+  display: inline-block;
+  width:25%;
+  padding-right: 2px;
+}
+/* M3LO2 Demonstrate floating elements */
+/* M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML) TRYING TO GET THE CARD IMAGE PERFECTLY IN THE FOOTER BOX, MIGHT NOT USE THIS LATER */
+/* M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is) WEBKIT FILTER OPACITY */
+/* M4LO3 Demonstrate the use of rounded corners for borders (CSS) */
+/* M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS) */
+
+footer > img {
+  float: right;
+  -webkit-filter: opacity(0.8);
+  position: relative;
+  border-radius: 8px;
+}
+
+/* M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site) 
+HIDE FOOTER FROM SMALLER SCREENS. HIDE VIDEOS AND MAP IMAGE FROM RECIPE, LESS CLUTTER 
+*/
+
+@media screen and (max-width: 600px) {
+  div.map{
+    display:none;
+  }
+  div.footer {
+    display: none;
+  }
